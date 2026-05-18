@@ -6,9 +6,9 @@ workflows:
       flutter: stable
       java: 17
     scripts:
-      - name: Clean and Get dependencies
+      - name: Recreate Android and Get dependencies
         script: |
-          flutter clean
+          flutter create . --platforms=android
           flutter pub get
       - name: Build APK
         script: |
