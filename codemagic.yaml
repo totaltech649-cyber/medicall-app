@@ -10,10 +10,6 @@ workflows:
         script: |
           flutter create . --platforms=android
           flutter pub get
-      - name: Fix Core Library Desugaring
-        script: |
-          cd android
-          echo "android.defaults.buildfeatures.desugarabicg=true" >> gradle.properties
       - name: Build APK
         script: |
           flutter build apk --release --no-shrink
