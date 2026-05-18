@@ -10,10 +10,6 @@ workflows:
         script: |
           flutter create . --platforms=android
           flutter pub get
-      - name: Configure Android SDK Version
-        script: |
-          sed -i '' 's/compileSdk = .*/compileSdk = 34/g' android/app/build.gradle
-          sed -i '' 's/targetSdk = .*/targetSdk = 34/g' android/app/build.gradle
       - name: Build APK
         script: |
           flutter build apk --release --no-shrink
