@@ -1,4 +1,5 @@
 name: medicall
+# force clean cache 1
 description: MédiCall — Application de téléconsultation médicale
 publish_to: 'none'
 version: 1.0.0+1
