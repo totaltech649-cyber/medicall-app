@@ -3,12 +3,11 @@ workflows:
     name: MediCall Android
     max_build_duration: 60
     environment:
-      flutter: 3.24.0
+      flutter: stable
       java: 17
     scripts:
-      - name: Recreate Android and Get dependencies
+      - name: Fetch dependencies
         script: |
-          flutter create . --platforms=android
           flutter pub get
       - name: Build APK
         script: |
