@@ -11,6 +11,11 @@ workflows:
           flutter create . --platforms=android
           flutter pub upgrade
           flutter pub get
+      - name: Enable Core Library Desugaring
+        script: |
+          sed -i '' 's/multiDexEnabled = .*/multiDexEnabled = true/g' android/app/build.gradle || true
+          echo "android.defaults.buildfeatures.desugarabicg=true" >> android/gradle.properties
+          sed -i '' 's/compileSdkVersion .*/compileSdkVersion 34/g' android/app/build.gradle || true
       - name: Build APK
         script: |
           flutter build apk --release --no-shrink
