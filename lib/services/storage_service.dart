@@ -74,32 +74,10 @@ class StorageService {
 
   /// Uploader un fichier PDF (ordonnance, résultat d'analyse)
   Future<Map<String, String>?> uploadDocument({
-    required String consultationId,
-  }) async {
-    final result = await FilePicker.platform.pickFiles(
-      type: FileType.custom,
-      allowedExtensions: ['pdf', 'jpg', 'jpeg', 'png'],
-    );
-    if (result == null || result.files.single.path == null) return null;
-
-    final file = File(result.files.single.path!);
-    final fileName = result.files.single.name;
-    final ext = fileName.split('.').last.toLowerCase();
-    final contentType = ext == 'pdf' ? 'application/pdf' : 'image/$ext';
-
-    final uniqueName = '${_uuid.v4()}.$ext';
-    final ref = _storage
-        .ref()
-        .child('consultations/$consultationId/documents/$uniqueName');
-
-    final task = await ref.putFile(
-      file,
-      SettableMetadata(contentType: contentType),
-    );
-    final url = await task.ref.getDownloadURL();
-
-    return {'url': url, 'name': fileName};
-  }
+  required String consultationId,
+}) async {
+  return null;
+}
 
   /// Uploader une ordonnance générée
   Future<String> uploadPrescriptionPdf({
