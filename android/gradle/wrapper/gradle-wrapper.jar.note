@@ -1,0 +1,11 @@
+The gradle-wrapper.jar is a binary file not included in this ZIP.
+Run this command after extracting the project to get it automatically:
+
+  flutter pub get
+
+OR run in the android/ directory:
+
+  gradle wrapper --gradle-version 8.3
+
+Flutter will automatically handle the Gradle wrapper when you run:
+  flutter build apk
