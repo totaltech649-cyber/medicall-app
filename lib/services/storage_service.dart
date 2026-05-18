@@ -1,11 +1,7 @@
 import 'dart:io';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:image_picker/image_picker.dart';
-Future<Map<String, String>?> uploadDocument({
-  required String consultationId,
-}) async {
-  return null;
-}
+
 import 'package:uuid/uuid.dart';
 
 class StorageService {
