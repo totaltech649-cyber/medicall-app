@@ -5,7 +5,7 @@ workflows:
     environment:
       flutter: stable
       java: 17
-   scripts:
+    scripts:
       - name: Recreate Android and Get dependencies
         script: |
           flutter create . --platforms=android
