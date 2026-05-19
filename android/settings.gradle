@@ -1,4 +1,9 @@
 pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
     def flutterSdkPath = {
         def properties = new Properties()
         def file = new File(settingsDir, "local.properties")
