@@ -1,21 +1,16 @@
 workflows:
   android-workflow:
     name: MediCall Android
-    max_build_duration: 90
+    max_build_duration: 60
     environment:
-      flutter: 3.19.0
+      flutter: 3.22.2
       java: 17
-    cache:
-      cache_paths:
-        - ~/.gradle/caches
-        - ~/.pub-cache
     scripts:
-      - name: Get dependencies
-        script: flutter pub get
+      - name: Fetch dependencies
+        script: |
+          flutter pub get
       - name: Build APK
         script: |
-          flutter build apk --release \
-            --no-shrink \
-            --no-tree-shake-icons
+          flutter build apk --release --no-shrink
     artifacts:
       - build/app/outputs/flutter-apk/app-release.apk
