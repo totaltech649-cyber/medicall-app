@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "661505990382",
+    "project_id": "medicall-bad5b",
+    "storage_bucket": "medicall-bad5b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:661505990382:android:8a2431b68978638cfe9dff",
+        "android_client_info": {
+          "package_name": "com.example.medicallapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPymKpRJUn7SKlTO5-L0qBPJ20kDiDe6E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
